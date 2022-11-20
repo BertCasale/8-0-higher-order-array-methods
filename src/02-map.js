@@ -32,7 +32,15 @@ function getSongTitles(songs) {
  *  getSongDetails(songs);
  *  //> [ "Berlin Tsukin by Taiyo Ky", "Up by Sebastian Kamae", ... ]
  */
-function getSongDetails(songs) {}
+function getSongDetails(songs) {
+  //create an array with all the song titles
+  const titles = songs.map((song) => {
+    //return the song title
+    return `${song.title} by ${song.artist}`;
+  })
+  //return the titles array
+  return titles;
+}
 
 /**
  * Returns an array of objects, where each object has a key that is the song title and has a value that is the song artist.
