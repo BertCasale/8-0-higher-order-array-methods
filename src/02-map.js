@@ -34,12 +34,12 @@ function getSongTitles(songs) {
  */
 function getSongDetails(songs) {
   //create an array with all the song titles
-  const titles = songs.map((song) => {
+  const details = songs.map((song) => {
     //return the song title
     return `${song.title} by ${song.artist}`;
   })
-  //return the titles array
-  return titles;
+  //return the details array
+  return details;
 }
 
 /**
