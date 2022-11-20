@@ -33,9 +33,9 @@ function getSongTitles(songs) {
  *  //> [ "Berlin Tsukin by Taiyo Ky", "Up by Sebastian Kamae", ... ]
  */
 function getSongDetails(songs) {
-  //create an array with all the song titles
+  //create an array with all the song titles and artists
   const details = songs.map((song) => {
-    //return the song title
+    //return the song title and artist
     return `${song.title} by ${song.artist}`;
   })
   //return the details array
@@ -51,7 +51,15 @@ function getSongDetails(songs) {
  *  getTitleAndArtist(songs);
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
-function getTitleAndArtist(songs) {}
+function getTitleAndArtist(songs) {
+  //create an array with all the song titles and artists
+  const details = songs.map((song) => {
+    //return the song title and artist as an object
+    return {[song.title] : song.artist}
+  })
+  //return the details array
+  return details;
+}
 
 module.exports = {
   getSongTitles,
