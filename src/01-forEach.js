@@ -30,7 +30,7 @@ function printAllSongTitles(songs) {
  */
 function printSongDetails(songs) {
   songs.forEach((song) => {
-    console.log(`${song.title} ${song.artist}`)
+    console.log(`${song.title} by ${song.artist}`)
   })
 }
 
