@@ -38,7 +38,9 @@ function findFirstSongUnderThreeMinutes(songs) {
  * @returns {Object} A single object.
  */
 function findFirstTitleTrack(songs) {
-  
+  return songs.find((song) => {
+    return song.title === song.album
+  })
 }
 
 module.exports = {
