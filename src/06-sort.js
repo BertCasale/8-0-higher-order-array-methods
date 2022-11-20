@@ -48,7 +48,14 @@ function sortByArtistNameDescending(songs) {
  * @returns {Object[]}
  */
 function sortBySongTitleAscending(songs) {
-  
+  return songs.sort((a, b) => {
+    //convert title to uppercase
+    let x = a.title.toUpperCase()
+    let y = b.title.toUpperCase()
+    //compare the title names
+      if (x < y) {return -1}
+      if (x > y) {return 1}
+  })
 }
 
 module.exports = {
